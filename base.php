@@ -45,7 +45,7 @@ function find($table,$id){
     }else{
         $sql=$sql . " id='$id' ";
     }
-    $row=$pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
+    $row=$pdo->query($sql)->fetch(PDO::FETCH_ASSOC); //PDO::FETCH_NUM 只取索引
     //mysqli_fetch_assoc()
     return $row;
 }

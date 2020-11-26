@@ -34,8 +34,52 @@ table{
     border: 3px double blue;
     padding: 20px;
     border-collapse: collapse;
+    margin: auto;
 }
 td{
     border: 1px solid #eee;
     padding: 5px;
+}
+
+td a{
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: .3rem;
+    box-shadow: 1px 1px 3px #333;
+}
+
+td a.del{
+    border: 1px solid #f00;    
+    color: rgb(211, 49, 49);
+}
+td a.del:hover{
+    background: #f44;
+    color: #eee;
+}
+td a.edit{
+    border: 1px solid rgb(68, 180, 255);
+    color: rgb(57, 168, 219);
+}
+td a.edit:hover{
+    background: rgb(17, 177, 252);
+    color: #eee;
+}
+td a.dl{
+    border: 1px solid rgb(255, 68, 193);
+    color: rgb(219, 57, 146);
+}
+td a.dl:hover{
+    background: rgb(252, 17, 127);
+    color: #eee;
+}
+a.toupload{
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: .3rem;
+    box-shadow: 1px 1px 3px #333;
+}
+form.up{
+    width: 40vw;
+    margin: auto;
+    border: 1px solid #eee;
 }

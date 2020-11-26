@@ -7,14 +7,14 @@
  */
 include_once("base.php");
 
-if(!empty($_FILES['img']['tmp_name'])){  //$_FILES['']專門處理是否上傳檔案
+if(!empty($_FILES['img']['tmp_name'])){  //$_FILES['']專門處理是否上傳檔案 
     // echo "檔案原始名稱".$_FILES['img']['name'];
     // echo "<br>檔案上傳成功";
     // echo "原始上傳路徑:".$_FILES['img']['tmp_name'];
     $subname="";
     $subname=explode('.',$_FILES['img']['name']);
 
-    $subname=array_pop($subname);
+    $subname=array_pop($subname);  //取陣列最後一個值
 
     // switch($_FILES['img']['type']){
     //     case "image/jpeg":
@@ -43,7 +43,7 @@ if(!empty($_FILES['img']['tmp_name'])){  //$_FILES['']專門處理是否上傳�
         ];
 
         save("upload",$row);
-
+        to('manage.php');
 }
 
 
@@ -60,7 +60,7 @@ if(!empty($_FILES['img']['tmp_name'])){  //$_FILES['']專門處理是否上傳�
 <body>
  <h1 class="header">檔案上傳練習</h1>
  <!----建立你的表單及設定編碼----->
-<form action="" method="post" enctype="multipart/form-data">
+<form class="up" action="" method="post" enctype="multipart/form-data">
     <div>上傳的檔案：<input type="file" name="img"></div>
     <div>檔案說明：<input type="text" name="note"></div>
     <div>檔案類型：<select name="type">
@@ -73,7 +73,7 @@ if(!empty($_FILES['img']['tmp_name'])){  //$_FILES['']專門處理是否上傳�
 </form>
 
 
-
+<a href="upload.php">刷新</a>
 
 <!----建立一個連結來查看上傳後的圖檔---->  
 <?php
@@ -84,6 +84,7 @@ echo "<td>縮圖</td>";
 echo "<td>檔案名稱</td>";
 echo "<td>檔案類型</td>";
 echo "<td>檔案說明</td>";
+echo "<td>檔案下載</td>";
 
 foreach($rows as $row){
     echo "<tr>";
