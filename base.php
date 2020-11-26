@@ -29,7 +29,7 @@ function all($table,...$arg){
     if(isset($arg[1])){
         $sql=$sql.$arg[1];
     }
-    echo $sql."<br>";
+    // echo $sql."<br>";
     return $pdo->query($sql)->fetchAll(); 
 }
 

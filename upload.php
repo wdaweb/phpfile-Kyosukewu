@@ -76,7 +76,34 @@ if(!empty($_FILES['img']['tmp_name'])){  //$_FILES['']專門處理是否上傳�
 
 
 <!----建立一個連結來查看上傳後的圖檔---->  
+<?php
 
+$rows=all('upload');
+echo "<table>";
+echo "<td>縮圖</td>";
+echo "<td>檔案名稱</td>";
+echo "<td>檔案類型</td>";
+echo "<td>檔案說明</td>";
+
+foreach($rows as $row){
+    echo "<tr>";
+
+    if($row['type']=='圖檔'){
+    echo "<td><img src='{$row['path']}' style='width:100px;'></td>";
+    }else{
+        echo "<td><img src='img/icon.png' style='width:100px;'></td>";
+    }
+    echo "<td>{$row['name']}</td>";
+    echo "<td>{$row['type']}</td>";
+    echo "<td>{$row['note']}</td>";
+
+    echo "<td><a href='{$row['path']}' download>下載</td>";
+
+
+    echo "</tr>";
+}  
+echo "</table>";
+?>
 
 </body>
 </html>
