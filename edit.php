@@ -8,7 +8,7 @@ if(!empty($_POST)){
     $row=find('upload',$_POST['id']); 
 
     if(!empty($_FILES['img']['tmp_name'])){
-        $row['name']=$_FILES['img']['tmp_name'];
+        $row['name']=$_FILES['img']['name'];
         $subname="";
         $subname=explode('.',$_FILES['img']['name']);
         $subname=array_pop($subname);
