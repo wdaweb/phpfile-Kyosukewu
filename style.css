@@ -35,6 +35,7 @@ table{
     padding: 20px;
     border-collapse: collapse;
     margin: auto;
+    text-align: center;
 }
 td{
     border: 1px solid #eee;
