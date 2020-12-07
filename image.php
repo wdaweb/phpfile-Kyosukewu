@@ -56,7 +56,7 @@
     $white=imagecolorallocate($dst_img,255,255,255);
     $dark=imagecolorallocate($dst_img,0,0,0);
     imagefill($dst_img,0,0,$white);
- }
+}
 
 
 ?>

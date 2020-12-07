@@ -7,11 +7,21 @@
     <title>PHP的檔案處理</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<style>
+
+a{
+    display: block;
+    width: 450px;
+    margin: auto;
+}
+
+</style>
 <body>
 <a href="upload.php"><div class="types">表單檔案上傳</div></a>
 <a href="manage.php"><div class="types">檔案管理</div></a>
 <a href="text-import.php"><div class="types">文字檔案處理</div></a>
 <a href="text-export.php"><div class="types">資料表匯出</div></a>
 <a href="image.php"><div class="types">圖形處理</div></a>
+<a href="captcha.php"><div class="types">圖形驗證碼</div></a>
 </body>
 </html>
